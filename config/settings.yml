@@ -1,0 +1,5 @@
+default:
+  urls:
+    tutorial: "http://www.railstutorial.org/"
+    help: "http://www.railstutorial.org/help"
+    book: "https://www.railstutorial.org/book"

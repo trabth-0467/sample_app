@@ -18,5 +18,18 @@ module RailsTutorial
     #
     # config.time_zone = "Central Time (US & Canada)"
     # config.eager_load_paths << Rails.root.join("extras")
+    config.i18n.load_path += Dir[Rails.root.join('config', 'locales', '**', '*.{rb,yml}')]
+    config.i18n.available_locales = [:en, :vi]
+    config.i18n.default_locale = :vi
+    # Load config/settings.yml
+    config.before_configuration do
+      env_file = Rails.root.join("config", "settings.yml")
+      if File.exist?(env_file) 
+        config_settings = YAML.load_file(env_file)[Rails.env] || {}
+        config_settings.each do |key, value|
+          ENV[key.to_s.upcase] ||= value.to_s
+        end
+      end
+    end
   end
 end

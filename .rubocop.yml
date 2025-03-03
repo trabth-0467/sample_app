@@ -2,7 +2,8 @@
 # in separate files. This file adds all other parameters apart from Enabled.
 
 # Add this to load Rails extension for rubocop
-require: rubocop-rails
+require:
+  - rubocop-rails
 
 # Put the following files into the same directory as this file.
 inherit_from:
@@ -11,6 +12,7 @@ inherit_from:
 
 # Common configuration.
 AllCops:
+  NewCops: enable
   # Include gemspec and Rakefile
   SuggestExtensions: false
   Include:
@@ -105,6 +107,7 @@ Layout/HashAlignment:
     - ignore_explicit
 
 Layout/ParameterAlignment:
+  Enabled: true
   # Alignment of parameters in multi-line method calls.
   #
   # The `with_first_parameter` style aligns the following lines along the same column
@@ -282,11 +285,12 @@ Style/LambdaCall:
     - call
     - braces
 
-Metrics/LineLength:
+Layout/LineLength:
   Max: 80
   AllowURI: true
   Exclude:
     - config/routes.rb
+  Enabled: true
 
 Style/Next:
   # With `always` all conditions at the end of an iteration needs to be
@@ -346,8 +350,14 @@ Style/PercentLiteralDelimiters:
     "%x": ()
 
 Naming/PredicateName:
+  NamePrefix:
+    - is
+    - has
+    - get
   ForbiddenPrefixes:
-    - get_
+    - is
+    - has
+    - get
 
 Style/RaiseArgs:
   EnforcedStyle: exploded

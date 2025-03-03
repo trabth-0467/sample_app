@@ -1,0 +1,27 @@
+vi:
+  base_title: "Ứng dụng mẫu Ruby on Rails Tutorial"
+  hello: "Xin chào thế giới"
+  static_pages:
+    home:
+      title_main: "TRANG CHỦ"
+      title: "Trang chủ"
+      description1: "Đây là trang chủ của"
+      description2: "ứng dụng mẫu Ruby on Rails Tutorial."
+    help:
+      title_main: "TRỢ GIÚP"
+      title: "Trợ giúp"
+      description1: "Nhận trợ giúp về Ruby on Rails Tutorial tại"
+      description2: "Trang trợ giúp của Ruby on Rails Tutorial."
+      description3: "Để được trợ giúp về ứng dụng mẫu này, xem"
+      description4: "Sách Ruby on Rails Tutorial."
+    about:
+      title: "Giới thiệu"
+      description: "Tìm hiểu thêm về Ruby on Rails Tutorial"
+    contact:
+      title: "Liên hệ"
+      description: "Liên hệ với Ruby on Rails Tutorial về ứng dụng mẫu"
+  header:
+    home: "Trang chủ"
+    help: "Trợ giúp"
+    log_in: "Đăng nhập"
+    logo: "Ứng dụng mẫu"

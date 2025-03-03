@@ -1,0 +1,57 @@
+@import 'bootstrap';
+@import 'color';
+
+section {
+  overflow: auto;
+}
+
+textarea {
+  resize: vertical;
+}
+
+.center {
+  text-align: center;
+}
+
+.center h1 {
+  margin-bottom: 10px;
+}
+
+#logo {
+  float: left;
+  margin-right: 10px;
+  font-size: 1.7em;
+  text-transform: uppercase;
+  letter-spacing: -1px;
+  padding-top: 9px;
+  font-weight: bold;
+  text-decoration: none;
+  color: $primary-color;
+}
+
+#logo:hover {
+  text-decoration: none;
+  color: $hover-color;
+}
+
+.navbar {
+  background-color: $secondary-color;
+  border-color: $secondary-color;
+}
+
+.nav {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+  justify-content: space-between;
+}
+
+.nav li a {
+  color: $text-color;
+  text-decoration: none;
+}
+
+.nav li a:hover {
+  color: $hover-color;
+  text-decoration: none;
+}
