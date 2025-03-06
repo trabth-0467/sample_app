@@ -1,0 +1,14 @@
+<header class="navbar navbar-fixed-top navbar-inverse">
+  <div class="container">
+    <%= link_to t("header.logo"), root_path(locale: I18n.locale), id: "logo" %>
+    <nav>
+      <ul class="nav navbar-nav navbar-right">
+        <li><%= link_to t("header.home"), root_path(locale: I18n.locale) %></li>
+        <li><%= link_to t("header.help"), help_path(locale: I18n.locale) %></li>
+        <li><%= link_to t("header.log_in"), login_path(locale: I18n.locale) %></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+<%= link_to "English", url_for(locale: "en") %> |
+<%= link_to "Vietnamese", url_for(locale: "vi") %>
