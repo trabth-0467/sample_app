@@ -1,5 +1,13 @@
-default:
-  urls:
-    tutorial: "http://www.railstutorial.org/"
-    help: "http://www.railstutorial.org/help"
-    book: "https://www.railstutorial.org/book"
+urls:
+  tutorial: "http://www.railstutorial.org/"
+  help: "http://www.railstutorial.org/help"
+  book: "https://www.railstutorial.org/book"
+user:
+  name:
+    max_length: 50
+  email:
+    max_length: 255
+    email_regex: "\\A[\\w+\\-.]+@[a-z\\d\\-.]+\\.[a-z]+\\z"
+    case_sensitive: false
+  password:
+    min_length: 8
