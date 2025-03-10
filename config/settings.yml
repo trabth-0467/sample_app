@@ -3,3 +3,13 @@ default:
     tutorial: "http://www.railstutorial.org/"
     help: "http://www.railstutorial.org/help"
     book: "https://www.railstutorial.org/book"
+  email_regex: '\A[\w+\-.]+@[a-z\d\-.]+\.[a-z]+\z/i'
+  validations:
+    name:
+      presence: true
+      maximum: 50
+    email:
+      presence: true
+      maximum: 255
+
+  
