@@ -1,6 +1,7 @@
 en:
   base_title: "Ruby on Rails Tutorial Sample App"
   hello: "Hello world"
+  sign_up: "Sign up!"
   static_pages:
     home:
       title_main: "HOME"
@@ -25,3 +26,18 @@ en:
     help: "Help"
     log_in: "Login"
     logo: "sample app"
+  activerecord:
+    models:
+      user: "User"
+    attributes:
+      user:
+        name: "Name"
+        email: "Email"
+        password: "Password"
+        confirm: "Confirm Password"
+  users:
+    new:
+     create_my_account: "Create My Account"
+     confirmation: "Confirmation"
+  msg:
+    welcome_msg: "Welcome to the sample app, success signup!"
