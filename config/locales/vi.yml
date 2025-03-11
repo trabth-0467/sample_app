@@ -1,6 +1,7 @@
 vi:
   base_title: "Ứng dụng mẫu Ruby on Rails Tutorial"
   hello: "Xin chào thế giới"
+  sign_up: "Đăng ký!"
   static_pages:
     home:
       title_main: "TRANG CHỦ"
@@ -25,3 +26,34 @@ vi:
     help: "Trợ giúp"
     log_in: "Đăng nhập"
     logo: "Ứng dụng mẫu"
+  activerecord:
+    models:
+      user: "Người dùng"
+    attributes:
+      user:
+        name: "Tên"
+        email: "Email"
+        password: "Mật khẩu"
+        password_confirmation: "Xác nhận mật khẩu"
+  errors:
+    messages:
+      blank: "không được để trống"
+      invalid: "không hợp lệ"
+      too_short: "quá ngắn (tối thiểu là %{count} ký tự)"
+    models:
+      user:
+        attributes:
+          name:
+            blank: "Tên không được để trống"
+          email:
+            blank: "Email không được để trống"
+            invalid: "Email không hợp lệ"
+          password:
+            blank: "Mật khẩu không được để trống"
+            too_short: "Mật khẩu quá ngắn (tối thiểu là %{count} ký tự)"
+  users:
+    new:
+      create_my_account: "Tạo tài khoản"
+      confirmation: "Xác nhận"
+    msg:
+      welcome_msg: "Chào mừng tới sample app, đăng ký thành công!"
