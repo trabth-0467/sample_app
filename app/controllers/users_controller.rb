@@ -15,6 +15,7 @@ class UsersController < ApplicationController
     @user = User.new user_params
 
     if @user.save
+      log_in @user
       flash[:success] = t "msg.welcome_msg"
       redirect_to user_path(@user, locale: I18n.locale), status: :see_other
     else

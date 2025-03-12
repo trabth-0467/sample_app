@@ -2,6 +2,7 @@ vi:
   base_title: "Ứng dụng mẫu Ruby on Rails Tutorial"
   hello: "Xin chào thế giới"
   sign_up: "Đăng ký!"
+  log_in: "Đăng nhập"
   static_pages:
     home:
       title_main: "TRANG CHỦ"
@@ -26,6 +27,7 @@ vi:
     help: "Trợ giúp"
     log_in: "Đăng nhập"
     logo: "Ứng dụng mẫu"
+    log_out: "Đăng xuất"
   activerecord:
     models:
       user: "Người dùng"
@@ -57,3 +59,6 @@ vi:
       confirmation: "Xác nhận"
     msg:
       welcome_msg: "Chào mừng tới sample app, đăng ký thành công!"
+      cf_new_user: "Chưa có tài khoản?"
+      new_user_msg: "Đăng ký người dùng mới!"
+      invalid_msg: "Thông tin đăng nhập không hợp lệ"
