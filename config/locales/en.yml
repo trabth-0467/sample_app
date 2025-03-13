@@ -46,3 +46,4 @@ en:
       cf_new_user: "No have account?"
       new_user_msg: "Sign up now!"
       invalid_msg: "Invalid email/password combination"
+      remember_me: "Remember me on this computer."
