@@ -62,3 +62,4 @@ vi:
       cf_new_user: "Chưa có tài khoản?"
       new_user_msg: "Đăng ký người dùng mới!"
       invalid_msg: "Thông tin đăng nhập không hợp lệ"
+      remember_me: "Ghi nhớ account của tôi trên thiết bị này."

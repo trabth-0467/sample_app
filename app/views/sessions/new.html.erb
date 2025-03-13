@@ -8,6 +8,9 @@
       <%= f.label :password, t("activerecord.attributes.user.password") %>
       <%= f.password_field :password, class: "form-control" %>
       <%= f.submit t "log_in", class: "btn btn-primary" %>
+      <%= f.label :remember_me, class: "checkbox inline" do %>
+        <%= f.check_box :remember_me %> <span> <%= t "users.msg.remember_me" %></span>
+      <% end %>
     <% end %>
     <p>
       <%= t "users.msg.cf_new_user" %><%= link_to t("users.msg.new_user_msg"), signup_path %>
