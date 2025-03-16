@@ -43,6 +43,7 @@ gem "tzinfo-data", platforms: %i(mingw mswin x64_mingw jruby)
 gem "bootsnap", require: false
 gem "bootstrap", "~> 5.1.3"
 gem "config"
+gem "dotenv-rails", require: "dotenv"
 # Use Sass to process CSS
 gem "bcrypt", "3.1.13"
 gem "faker"

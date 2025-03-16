@@ -3,6 +3,8 @@ User.find_or_create_by!(email: "admin@example.com") do |user|
   user.password = "11111111"
   user.password_confirmation = "11111111"
   user.admin = true
+  user.activated = true
+  user.activated_at = Time.zone.now
 end
 
 99.times do |n|
@@ -13,5 +15,7 @@ end
     user.name = name
     user.password = password
     user.password_confirmation = password
+    user.activated = true
+    user.activated_at = Time.zone.now
   end
 end

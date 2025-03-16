@@ -1,4 +1,5 @@
 require "active_support/core_ext/integer/time"
+Dotenv.require_keys("USER_EMAIL", "USER_PASSWORD")
 
 Rails.application.configure do
   # Settings specified here will take precedence over those in config/application.rb.
@@ -67,4 +68,18 @@ Rails.application.configure do
 
   # Uncomment if you wish to allow Action Cable access from any origin.
   # config.action_cable.disable_request_forgery_protection = true
+  
+  host = Settings.smtp.host_address
+  config.action_mailer.raise_delivery_errors = true
+  config.action_mailer.delivery_method = :smtp
+  config.action_mailer.default_url_options = {host: host}
+  config.action_mailer.smtp_settings = {
+    user_name: Settings.smtp.user_name,  
+    password: Settings.smtp.password,
+    enable_starttls_auto: Settings.smtp.enable_starttls_auto,
+    address: Settings.smtp.address,
+    host: Settings.smtp.host,
+    port: Settings.smtp.port,
+    authentication: Settings.smtp.authentication.to_sym
+  }
 end

@@ -100,6 +100,10 @@ GEM
       irb (>= 1.5.0)
       reline (>= 0.3.1)
     deep_merge (1.2.2)
+    dotenv (3.1.7)
+    dotenv-rails (3.1.7)
+      dotenv (= 3.1.7)
+      railties (>= 6.1)
     erubi (1.12.0)
     execjs (2.10.0)
     faker (3.5.1)
@@ -280,6 +284,7 @@ DEPENDENCIES
   capybara
   config
   debug
+  dotenv-rails
   faker
   htmlbeautifier
   importmap-rails

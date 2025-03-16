@@ -1,0 +1,3 @@
+<p><%= t "account_activations.msg.hi", name: @user.name %></p>
+<p><%= t "account_activations.msg.click" %></p>
+<%= edit_account_activation_url(id: @user.activation_token, email: @user.email) %>

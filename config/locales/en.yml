@@ -67,3 +67,17 @@ en:
       update_success: "Profile updated"
       update_fail: "Profile not updated"
       destroy_confirm: "Are you sure?"
+  account_activations:
+    mailer:
+      subject: "Account activation"
+      content: "Click the link below to activate your account:"
+      account_activated: "Account activated!"
+      invalid_activation_link: "Invalid activation link"
+      account_not_activated: "Account not activated"
+      account_check_email: "Please check your email to activate your account"
+    msg:
+      hi: "Hi"
+      we_are: "We are"
+      welcome: "Click on the link below to activate your account:" 
+      activate: "Activate"
+      click: "Click the link below to activate your account:"
