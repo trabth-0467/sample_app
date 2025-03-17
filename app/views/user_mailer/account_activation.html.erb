@@ -1,0 +1,4 @@
+<p><%= t "account_activations.msg.hi", name: @user.name %></p>
+<p><%= t "account_activations.msg.we_are" %><%= Settings.smtp.app_name %></p>
+<p><%= t "account_activations.msg.welcome" %></p>
+<%= link_to t("account_activations.msg.activate"), edit_account_activation_url(id: @user.activation_token, email: @user.email) %>

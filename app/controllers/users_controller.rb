@@ -27,9 +27,9 @@ class UsersController < ApplicationController
     @user = User.new user_params
 
     if @user.save
-      log_in @user
-      flash[:success] = t "msg.welcome_msg"
-      redirect_to user_path(@user, locale: I18n.locale), status: :see_other
+      @user.send_activation_email
+      flash[:warning] = t "account_activations.mailer.account_check_email"
+      redirect_to root_path
     else
       render :new, status: :unprocessable_entity
     end

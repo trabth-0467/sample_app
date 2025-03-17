@@ -6,7 +6,13 @@ class SessionsController < ApplicationController
   def create
     if @user&.authenticate(params.dig(:session, :password))
       forwarding_url = session[:forwarding_url]
-      handle_login(forwarding_url)
+      if @user.activated?
+        handle_login(forwarding_url)
+      else
+        flash.now[:warning] =
+          t "account_activations.mailer.account_not_activated"
+        render :new, status: :unprocessable_entity
+      end
     else
       handle_failed_login
     end

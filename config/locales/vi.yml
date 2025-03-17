@@ -83,3 +83,17 @@ vi:
       update_success: "Người dùng đã được cập nhật"
       update_fail: "Người dùng không được cập nhật"
       destroy_confirm: "Bạn có chắc chắn?"
+  account_activations:
+    mailer:
+      subject: "Kích hoạt tài khoản"
+      content: "Nhấn vào đường dẫn sau để kích hoạt tài khoản:"
+      account_activated: "Kích hoạt tài khoản"
+      invalid_activation_link: "Đường dẫn kích hoạt không hợp lệ"
+      account_not_activated: "Tài khoản chưa được kích hoạt"
+      account_check_email: "Vui lòng kiểm tra email để kích hoạt tài khoản"
+    msg:
+      hi: "Xin chào"
+      we_are: "Chúng tôi là"
+      welcome: "Nhấn vào đường dẫn sau để kích hoạt tài khoản của bạn:"
+      activate: "Kích hoạt"
+      click: "Nhấn vào đường dẫn sau để kích hoạt tài khoản của bạn:"
