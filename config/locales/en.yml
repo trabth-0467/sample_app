@@ -10,6 +10,11 @@ en:
   logout_success: "Logged out"
   invalid_email_password_combination: "Invalid email/password combination"
   login_success: "Logged in"
+  reset_password: "Reset password"
+  submit: "Submit"
+  reset_password1: "Please check your email to reset your password"
+  email_not_found: "Email not found"
+  confirm: "Confirmation"
   static_pages:
     home:
       title_main: "HOME"
@@ -78,6 +83,17 @@ en:
     msg:
       hi: "Hi"
       we_are: "We are"
-      welcome: "Click on the link below to activate your account:" 
+      welcome: "Click on the link below to activate your account:"
       activate: "Activate"
       click: "Click the link below to activate your account:"
+  password:
+      forgot: "Forgot password"
+      subject: "Password reset"
+      content1: "Click the link below to reset your password:"
+      content3: "This password reset link will expire in two hours."
+      content2: "If you did not request a password reset, please ignore this email and your password will remain unchanged."
+      update: "Update password"
+  noti:
+    password_empty: "Password can't be blank"
+    password_success: "Reset password successfully"
+    password_expired: "Password reset has expired"
