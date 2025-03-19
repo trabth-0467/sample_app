@@ -10,6 +10,10 @@ vi:
   logout_success: "Đăng xuất thành công"
   invalid_email_password_combination: "Kết hợp email/mật khẩu không hợp lệ"
   login_success: "Đăng nhập thành công"
+  reset_password: "Đặt lại mật khẩu"
+  submit: "Gửi"
+  reset_password1: "Vui lòng kiểm tra email để đặt lại mật khẩu"
+  email_not_found: "Email không tìm thấy"
   static_pages:
     home:
       title_main: "TRANG CHỦ"
@@ -97,3 +101,14 @@ vi:
       welcome: "Nhấn vào đường dẫn sau để kích hoạt tài khoản của bạn:"
       activate: "Kích hoạt"
       click: "Nhấn vào đường dẫn sau để kích hoạt tài khoản của bạn:"
+  password:
+      forgot: "Quên mật khẩu?"
+      subject: "Đặt lại mật khẩu"
+      content1: "Nhấn vào đường dẫn sau để đặt lại mật khẩu:"
+      content3: "Đường dẫn sẽ hết hạn sau 2 giờ."
+      content2: "Nếu bạn không muốn đặt lại mật khẩu, vui lòng bỏ qua email này."
+      update: "Cập nhật mật khẩu"
+  noti:
+    password_empty: "Mật khẩu không được để trống"
+    password_success: "Đặt lại mật khẩu thành công"
+    password_expired: "Đường dẫn đặt lại mật khẩu đã hết hạn"
