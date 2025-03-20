@@ -26,5 +26,14 @@ smtp:
   authentication: login
   user_name: <%= ENV['USER_EMAIL'] %>
   password: <%= ENV['USER_PASSWORD'] %>
-default:
+defaults:
   time_expired: 2
+  digit_140: 140
+  image_types: ["image/jpeg", "image/png"]
+  max_image_size: 5
+  micropost_image_width: 400
+  micropost_image_height: 400
+micropost:
+  content:
+    max_length: 140
+  pagy_items: 10

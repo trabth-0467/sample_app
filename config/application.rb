@@ -1,5 +1,4 @@
 require_relative "boot"
-
 require "rails/all"
 
 # Require the gems listed in Gemfile, including any gems
@@ -10,7 +9,7 @@ module RailsTutorial
   class Application < Rails::Application
     # Initialize configuration defaults for originally generated Rails version.
     config.load_defaults 7.0
-
+    config.active_storage.variant_processor = :mini_magick
     # Configuration for the application, engines, and railties goes here.
     #
     # These settings can be overridden in specific environments using the files
@@ -24,7 +23,7 @@ module RailsTutorial
     # Load config/settings.yml
     config.before_configuration do
       env_file = Rails.root.join("config", "settings.yml")
-      if File.exist?(env_file) 
+      if File.exist?(env_file)
         config_settings = YAML.load_file(env_file)[Rails.env] || {}
         config_settings.each do |key, value|
           ENV[key.to_s.upcase] ||= value.to_s

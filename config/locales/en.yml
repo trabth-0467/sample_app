@@ -15,6 +15,18 @@ en:
   reset_password1: "Please check your email to reset your password"
   email_not_found: "Email not found"
   confirm: "Confirmation"
+  microposts: "Microposts"
+  micropost_feed: "Micropost Feed"
+  view_profile: "View profile"
+  compose_new_post: "Compose new post..."
+  micropost_created: "Micropost created"
+  micropost_deleted: "Micropost deleted"
+  deleted_failed: "Micropost not deleted"
+  micropost_invalid: "Micropost invalid"
+  posted: "posted"
+  ago: "ago"
+  delete: "Delete"
+  you_sure: "Are you sure?"
   static_pages:
     home:
       title_main: "HOME"
@@ -97,3 +109,7 @@ en:
     password_empty: "Password can't be blank"
     password_success: "Reset password successfully"
     password_expired: "Password reset has expired"
+  micropost:
+    image_size: "Image size should be less than 5MB"
+    image_format: "Invalid image format"
+    image_size: "Image size should be less than 5MB"

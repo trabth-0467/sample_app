@@ -1,21 +1,5 @@
-User.find_or_create_by!(email: "admin@example.com") do |user|
-  user.name = "Admin User"
-  user.password = "11111111"
-  user.password_confirmation = "11111111"
-  user.admin = true
-  user.activated = true
-  user.activated_at = Time.zone.now
-end
-
-99.times do |n|
-  name = Faker::Name.name
-  email = "example-#{n+1}@railstutorial.org"
-  password = "password"
-  User.find_or_create_by!(email: email) do |user|
-    user.name = name
-    user.password = password
-    user.password_confirmation = password
-    user.activated = true
-    user.activated_at = Time.zone.now
-  end
+user = User.order(:created_at).take(6)
+30.times do
+  content = Faker::Lorem.sentence(word_count: 5)
+  user.each { |user| user.microposts.create!(content: content) }
 end
