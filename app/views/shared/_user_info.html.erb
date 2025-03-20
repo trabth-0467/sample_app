@@ -1,0 +1,4 @@
+<%= link_to gravatar_for(current_user, size: Settings.user.avatar.gravatar_size), user_path(current_user, locale: I18n.locale) %>
+<h1><%= current_user.name %></h1>
+<span><%= link_to t("view_profile"), user_path(current_user, locale: I18n.locale) %></span>
+<span><%= pluralize current_user.microposts.count, "micropost" %></span>

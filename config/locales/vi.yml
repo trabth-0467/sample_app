@@ -14,6 +14,19 @@ vi:
   submit: "Gửi"
   reset_password1: "Vui lòng kiểm tra email để đặt lại mật khẩu"
   email_not_found: "Email không tìm thấy"
+  microposts: "Microposts"
+  confirm: "Xác nhận"
+  micropost_feed: "Bảng tin"
+  view_profile: "Xem hồ sơ"
+  compose_new_post: "Viết bài mới..."
+  micropost_created: "Micropost đã được tạo"
+  micropost_deleted: "Micropost đã bị xóa"
+  deleted_failed: "Micropost không bị xóa"
+  micropost_invalid: "Micropost không hợp lệ"
+  posted: "đã đăng"
+  ago: "trước"
+  delete: "Xóa"
+  you_sure: "Bạn có chắc chắn?"
   static_pages:
     home:
       title_main: "TRANG CHỦ"
@@ -112,3 +125,7 @@ vi:
     password_empty: "Mật khẩu không được để trống"
     password_success: "Đặt lại mật khẩu thành công"
     password_expired: "Đường dẫn đặt lại mật khẩu đã hết hạn"
+  micropost:
+    image_size: "Kích thước hình ảnh không được lớn hơn 5MB"
+    image_format: "Định dạng hình ảnh không hợp lệ"
+    image_size: "Kích thước hình ảnh không được lớn hơn 5MB"

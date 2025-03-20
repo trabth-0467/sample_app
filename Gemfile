@@ -45,9 +45,11 @@ gem "bootstrap", "~> 5.1.3"
 gem "config"
 gem "dotenv-rails", require: "dotenv"
 # Use Sass to process CSS
+gem "active_storage_validations", "0.9.8"
 gem "bcrypt", "3.1.13"
 gem "faker"
 gem "htmlbeautifier"
+gem "image_processing", "1.12.2"
 gem "pagy", "~> 6.0"
 gem "sassc-rails"
 # Use Active Storage variants [https://guides.rubyonrails.org/active_storage_overview.html]

@@ -1,8 +1,31 @@
 <% provide :title, t("static_pages.home.title_main") %>
 <h1><%= t "static_pages.home.title" %></h1>
-<p>
-  <%= t("static_pages.home.description1") %>
-  <%= link_to Settings.urls.tutorial do %>
-    <%= t("static_pages.home.description2") %>
-  <% end %>
-</p>
+<% if logged_in? %>
+  <div class="row">
+    <aside class="col-md-4">
+      <section class="user_info">
+        <%= render "shared/user_info" %>
+      </section>
+      <section class="micropost_form">
+        <%= render "shared/micropost_form" %>
+      </section>
+    </aside>
+    <div class="col-md-8">
+      <h3><%= t "micropost_feed" %></h3>
+      <%= render "shared/feed" %>
+      <% if @feed_items.any? %>
+        <ol class="microposts">
+          <%= render @feed_items %>
+        </ol>
+        <%= pagy_bootstrap_nav @pagy %>
+      <% end %>
+    </div>
+  </div>
+<% else %>
+  <p>
+    <%= t("static_pages.home.description1") %>
+    <%= link_to Settings.urls.tutorial do %>
+      <%= t("static_pages.home.description2") %>
+    <% end %>
+  </p>
+<% end %>

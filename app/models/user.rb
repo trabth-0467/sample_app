@@ -3,6 +3,8 @@ class User < ApplicationRecord
   before_save :downcase_email
   before_create :create_activation_digest
 
+  has_many :microposts, dependent: :destroy
+
   validates :name, presence: true,
                    length: {maximum: Settings.user.name.max_length}
 
@@ -34,7 +36,7 @@ class User < ApplicationRecord
   attr_accessor :remember_token, :activation_token, :reset_token
 
   def password_reset_expired?
-    reset_sent_at < Settings.default.time_expired.hours.ago
+    reset_sent_at < Settings.defaults.time_expired.hours.ago
   end
 
   def create_reset_digest
@@ -45,6 +47,10 @@ class User < ApplicationRecord
 
   def send_password_reset_email
     UserMailer.password_reset(self).deliver_now
+  end
+
+  def feed
+    microposts
   end
 
   def remember

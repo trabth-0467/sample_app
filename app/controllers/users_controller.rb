@@ -7,7 +7,15 @@ class UsersController < ApplicationController
     @pagy, @users = pagy(User.all, items: Settings.user.pagy_items)
   end
 
-  def show; end
+  def show
+    if @user
+      @page, @microposts = pagy @user.microposts.newest,
+                                limit: Settings.micropost.pagy_items
+    else
+      flash[:danger] = t "users.msg.not_found"
+      redirect_to root_path
+    end
+  end
 
   def update
     if @user.update(user_params)
@@ -52,27 +60,19 @@ class UsersController < ApplicationController
     params.require(:user).permit(User::USER_ATTRIBUTES)
   end
 
-  def logged_in_user
-    return if logged_in?
-
-    store_location
-    flash[:danger] = t "need_login"
-    redirect_to login_path
-  end
-
   def find_user
     @user = User.find_by(id: params[:id])
     return if @user
 
     flash[:danger] = t "users.msg.not_found"
-    redirect_to static_pages_home_path
+    redirect_to root_path
   end
 
   def correct_user
     return if current_user?(@user)
 
     flash[:danger] = t "not_user"
-    redirect_to static_pages_home_path
+    redirect_to root_path
   end
 
   def admin_user
