@@ -8,8 +8,13 @@ Rails.application.routes.draw do
     get "signup", to: "users#new", as: "sign_up"
     post "signup", to: "users#create"
     resources :password_resets, only: [:new, :create, :edit, :update]
-    resources :users, only: [:show, :edit, :index, :update, :destroy]
+    resources :users, only: [:show, :edit, :index, :update, :destroy] do
+      member do
+        get :following, :followers
+      end
+    end
     resources :account_activations, only: [:edit]
     resources :microposts, only: [:create, :destroy]
+    resources :relationships, only: %i(create destroy)
   end
 end
