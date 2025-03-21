@@ -15,6 +15,7 @@ user:
     gravatar_email: "http://gravatar.com/emails"
     gravatar_size: 80
     gravatar_size_user: 50
+    gravatar_size_small: 30
   pagy_items: 10
 smtp:
   app_name: "Sample App"

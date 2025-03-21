@@ -1,0 +1,5 @@
+<%= form_for find_relationship(current_user, @user),
+  url: relationship_path(find_relationship(current_user, @user), locale: I18n.locale),
+  html: { method: :delete, remote: true } do |f| %>
+  <%= f.submit t("unfollow"), class: "btn" %>
+<% end %>
