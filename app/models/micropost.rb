@@ -2,6 +2,7 @@ class Micropost < ApplicationRecord
   MICROPOST_ATTRIBUTES = %i(content image).freeze
   belongs_to :user
   scope :newest, ->{order created_at: :desc}
+  scope :relate_post, ->(user_ids){where user_id: user_ids}
   validates :content, presence: true,
             length: {maximum: Settings.defaults.digit_140}
 

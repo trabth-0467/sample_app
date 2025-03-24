@@ -23,10 +23,15 @@ en:
   micropost_deleted: "Micropost deleted"
   deleted_failed: "Micropost not deleted"
   micropost_invalid: "Micropost invalid"
+  view_profile: "View profile"
   posted: "posted"
   ago: "ago"
   delete: "Delete"
   you_sure: "Are you sure?"
+  following: "Following"
+  followers: "Followers"
+  follow: "Follow"
+  unfollow: "Unfollow"
   static_pages:
     home:
       title_main: "HOME"
